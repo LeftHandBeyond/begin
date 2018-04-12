@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<canvas id = "cvs" width="500" height="500"></canvas>
+<script>
+    var cvs = document.getElementById('cvs');
+    var ctx = cvs.getContext('2d');
+
+    /*
+    * 线交点的样式：
+    * ctx.lineJoin = "miter","round","bevel"
+    * miter:两边向外延伸，相交成为一个尖尖角
+    * round:圆头
+    * bevel:两边相连成为一个斜面
+    * */
+
+    ctx.lineWidth = 10;
+    //miter:两边向外延伸，相交成为一个尖尖角
+    ctx.moveTo(10,10);
+    ctx.lineTo(60,110);
+    ctx.lineTo(110,10);
+    ctx.stroke();
+    //round:圆头
+    ctx.beginPath();
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
+    ctx.moveTo(10,50);
+    ctx.lineTo(60,150);
+    ctx.lineTo(110,50);
+    ctx.stroke();
+    //bevel:两边相连成为一个斜面
+    ctx.beginPath();
+    ctx.lineJoin = "bevel";
+    ctx.moveTo(10,90);
+    ctx.lineTo(60,190);
+    ctx.lineTo(110,90);
+    ctx.stroke();
+</script>
+</body>
+</html>

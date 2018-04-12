@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    /*
+    * 数组map方法，es5提供的
+    * 语法：数组.map(function(val,index){
+    * retutn arr})
+    * 返回值：把回调return的值组成一个新的数组
+    * */
+    var arr = [1,2,3,4,5];
+
+    var newArr = arr.map(function(val,index){
+        return val * 10;
+    });
+    console.log(newArr);
+
+</script>
+
+</body>
+</html>

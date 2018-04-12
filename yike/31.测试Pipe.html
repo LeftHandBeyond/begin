@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <canvas id = "cvs" width="500" height="500"></canvas>
+    <script src="Pipe.js"></script>
+    <script>
+        var cvs = document.getElementById('cvs');
+        var ctx = cvs.getContext('2d');
+
+        var pipe = new Pipe(200,200,90,[20,30,67,90,78,69,100]);
+        pipe.draw();
+    </script>
+</body>
+</html>

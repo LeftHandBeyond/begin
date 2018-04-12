@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<canvas id = "cvs" width="500" height="500"></canvas>
+<script>
+    var cvs = document.getElementById('cvs');
+    var ctx = cvs.getContext('2d');
+
+    /*
+    * 画一个矩形的路径：
+    * ctx.rect(起点x轴的坐标，起点y轴的坐标，宽，高);
+    * */
+    ctx.rect(30,10,50,50);
+    ctx.stroke();
+
+    /*
+    * 绘制一个描边的矩形，这个方法不会产生任何路径
+    * ctx.strokeRect(起点x轴的坐标，起点y轴的坐标，宽，高);
+    * */
+    ctx.strokeRect(30,100,50,50);
+
+    /*
+    * 绘制一个填充的矩形，这个方法不会产生任何路径
+    * ctx.fillRect(起点x轴的坐标，起点y轴的坐标，宽，高);
+    * */
+    ctx.fillRect(30,170,50,50);
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        canvas{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<canvas id = "cvs" width="500" height="500"></canvas>
+<script>
+
+    var cvs = document.getElementById('cvs');
+    /*
+     * canvas是用来展示绘图效果的标签，他和img类似，都是行内块元素
+     * 同一个页面中可以拥有多个canvas便签
+     * 画布有默认的300*150，要设置画布的宽高，需要借助canvas的属性
+     * */
+    var ctx = cvs.getContext('2d');
+    /*
+    * canvas是用来展示绘图效果的标签，
+    * 那么这个图从哪里来？？？
+    * 那么需要打开canvas(通过getContext来打开)，然后在上面绘制图形
+    * */
+
+    /*
+    * canvas绘图的步骤：
+    * 1.先移动到指定的位置
+    * 2.开始画线条
+    * 3.描边路径
+    * */
+
+    ctx.moveTo(10,10);
+
+    ctx.lineTo(110,10);
+    ctx.lineTo(110,110);
+    ctx.lineTo(10,110);
+    ctx.lineTo(10,10);
+
+    //
+    ctx.stroke();
+
+
+
+</script>
+</body>
+</html>

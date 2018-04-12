@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<canvas id = "cvs"></canvas>
+<script>
+    var cvs = document.getElementById('cvs');
+    var ctx = cvs.getContext('2d');
+
+    //封装绘制图形的函数
+    function juxing(startX,startY,width,height,lineWidth,strokeStyle){
+        ctx.moveTo(startX,startY);
+
+        ctx.lineTo(startX+width ,startY);
+        ctx.lineTo(startX+width,startY+height);
+        ctx.lineTo(startX,startY+height);
+        ctx.closePath();
+
+        ctx.lineWidth = lineWidth;
+        ctx.strokeStyle = strokeStyle;
+//        ctx.fillStyle = fillStyle;
+
+        ctx.fill();
+        ctx.stroke();
+
+
+    }
+
+    //
+    juxing(10,10,100,100,9,"blue");
+
+//    ctx.moveTo(35,35);
+//    ctx.lineTo(35,55);
+//    ctx.lineTo(55,55);
+//    ctx.lineTo(55,35);
+//    ctx.closePath();
+//    //
+//    ctx.fill();
+</script>
+</body>
+</html>
